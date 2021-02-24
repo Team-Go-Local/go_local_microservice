@@ -1,0 +1,13 @@
+language: ruby
+rbenv:
+- 2.5.3
+script:
+- bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: Mj/QyDEG5J3Gq/o9etDur3PEwdBIOG70mXbNqHB6/eb8+DzRznblmKeOwEVx9ztYJiA9UR+8VORha5JUq/SGQhLgbF7nXg/45p9Hz0mnicHKb3zEHp5S3EAYwhiCq1Ru8orjg2Z/fFLtYxHLVnF8D+YyT91k2Kaiyy8pn4BjkZi0JUlmJvi3TLsD3BhxEVU7ooklxFgWux3gqfvvcvRjvwRB365eQx+eEEpx5bOsZtmUh/Y0VBRONAfIub8a4IVSjCulXw3pFsw9zYgngQR9p2SX9LJsPKlG7gscmiUZPGKurMfaanCu61SEz2QKq2n2dOCVU92aXjKIT+U2VZ2TTy6+o/V3K0VHtjebfZabKR7d5Zpb9PigNgwxS5UgUEk8kWQSCL1FCzJwFQsTRoD5Jc7DGAj1EFzNnwipcVt0z5bUhLVcKPtOGRSl6e45Xpq4bsUFMMuSJo/+/xfU3ZwCOZ8CtEMmyKLLP2LvVPhDLO+n9rxgcOG6q5Kg9jFZh4HIpLkM5AqGOSt0Ss5s39Uu7fyXDkUHfEt/De75cThMCQ1zT3cFEV2/s2C6Lv45GMVaBAu1OyxShu6telYk8iitD7RDL8J3I88WFlxJQsr83ayrlCjWYs8ggcnGKvEg/IDv0OsdCSuD9MIxMaCCg54R8BacigeIbYhxFnOOWkYDK28=
+  app: go-local-maps-api
+  on:
+    repo: Team-Go-Local/go_local_microservice
+    branch: main
