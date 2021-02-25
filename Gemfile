@@ -8,6 +8,8 @@ gem 'faraday'
 gem 'fast_jsonapi'
 gem 'figaro', git: 'https://github.com/bpaquet/figaro.git', branch: 'sinatra'
 gem 'sinatra', require: 'sinatra/base'
+gem 'shotgun'
+gem 'require_all'
 
 group :development, :test do
   gem 'factory_bot'

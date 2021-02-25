@@ -1,4 +1,5 @@
 ENV['SINATRA_ENV'] ||= "test"
+require './config/environment'
 require 'simplecov'
 SimpleCov.start do
   add_filter ['spec/']
