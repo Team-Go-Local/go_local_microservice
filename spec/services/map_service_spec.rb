@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe MapService do
   it 'gets place info data' do
-    query_string = 'Casa Bonita'
+    query_string = 'Casa Bonita Denver'
     place_info   = MapService.place_search(query_string)
     
     expect(place_info).to be_a Hash

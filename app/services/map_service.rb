@@ -1,9 +1,9 @@
 require 'faraday'
+require './config/environment'
 
 class MapService 
   class << self
     def place_search(query)
-      require 'pry'; binding.pry
       response = conn.get('place/textsearch/json') do |req|
         req.params[:query] = query.downcase.gsub(' ', '-')
       end

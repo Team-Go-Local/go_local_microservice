@@ -1,3 +1,4 @@
+ENV['SINATRA_ENV'] ||= "test"
 require 'simplecov'
 SimpleCov.start do
   add_filter ['spec/']
@@ -108,3 +109,9 @@ def check_hash_structure(object, key, data_type)
   expect(object).to have_key(key)
   expect(object[key]).to be_a(data_type)
 end
+
+Figaro.application = Figaro::Application.new(
+  environment: 'test',
+  path: File.expand_path("config/application.yml")
+)
+Figaro.load
