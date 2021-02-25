@@ -110,9 +110,4 @@ def check_hash_structure(object, key, data_type)
   expect(object).to have_key(key)
   expect(object[key]).to be_a(data_type)
 end
-
-Figaro.application = Figaro::Application.new(
-  environment: 'test',
-  path: File.expand_path("config/application.yml")
-)
-Figaro.load
+require 'figaro/sinatra'
