@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/textsearch/json?key=<MAP_API_KEY>&query=casa-bonita-denver
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 26 Feb 2021 01:15:35 GMT
+      Expires:
+      - Fri, 26 Feb 2021 01:20:35 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '845'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=591
+      Alt-Svc:
+      - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "business_status" : "OPERATIONAL",
+                 "formatted_address" : "6715 W Colfax Ave, Lakewood, CO 80214, United States",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.7417583,
+                       "lng" : -105.0706972
+                    },
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74296027989273,
+                          "lng" : -105.0694527201073
+                       },
+                       "southwest" : {
+                          "lat" : 39.74026062010729,
+                          "lng" : -105.0721523798927
+                       }
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+                 "name" : "Casa Bonita",
+                 "opening_hours" : {
+                    "open_now" : true
+                 },
+                 "photos" : [
+                    {
+                       "height" : 3024,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/108638165399857172930\"\u003eA Google User\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "ATtYBwLZeZ16UlM-tKykSUqETOZYG4CPZkLkvO53zu8zrlTEP0O34HvW9DPc-L6i-mpsnz2QIx5JQ3Y7oCSp5Yr9_568mNQ0PxotWMz17bdzqIZkGVhaP2-Moz3_QEtti2VYfErFcYmEsWMSQ_7Z1fzjZedSaIwO90L3l2_jomd51E35rb_o",
+                       "width" : 4032
+                    }
+                 ],
+                 "place_id" : "ChIJE7tYRySHa4cRSauU_fDROfk",
+                 "plus_code" : {
+                    "compound_code" : "PWRH+PP Lakewood, Colorado",
+                    "global_code" : "85FPPWRH+PP"
+                 },
+                 "price_level" : 2,
+                 "rating" : 3.4,
+                 "reference" : "ChIJE7tYRySHa4cRSauU_fDROfk",
+                 "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+                 "user_ratings_total" : 6920
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Fri, 26 Feb 2021 01:15:35 GMT
+recorded_with: VCR 6.0.0

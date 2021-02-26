@@ -18,3 +18,8 @@ group :development, :test do
   gem 'rspec'
   gem 'simplecov'
 end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+end
