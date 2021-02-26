@@ -6,7 +6,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: ENV[MAP_API_KEY]
+    secure: 
   app: go-local-maps-api
   on:
     repo: Team-Go-Local/go_local_microservice
