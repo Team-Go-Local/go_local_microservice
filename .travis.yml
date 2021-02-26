@@ -1,13 +1,12 @@
 language: ruby
 rbenv:
 - 2.5.3
+before_install:
+- gem install bundler
 script:
 - bundle exec rspec
 deploy:
   provider: heroku
   api_key:
-    secure: 
+    secure:
   app: go-local-maps-api
-  on:
-    repo: Team-Go-Local/go_local_microservice
-    branch: main
