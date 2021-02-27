@@ -26,7 +26,7 @@ RSpec.describe 'place search request' do
     end
   end
 
-  it 'returns an empty array if no results are found' do
+  it 'returns null if no results are found' do
     VCR.use_cassette('no_results') do
       get '/api/v1/place_search?location=search-query-with-no-results'
 

@@ -22,7 +22,7 @@ RSpec.describe MapService do
         all_strings = place[:types].all? { |type| type.class == String }
         expect(all_strings).to be true
         expect(place_info.keys).to match_array(%i[candidates status])
-        expect(place_info[:candidates].keys).to match_array(%i[formatted_address name place_id types])
+        expect(place_info[:candidates][0].keys).to match_array(%i[formatted_address name place_id types])
       end
     end
 
