@@ -6,6 +6,6 @@ class MapController < Sinatra::Base
   get '/api/v1/place_search' do
     info = MapService.place_search(params[:location])
     place = Place.new(info)
-    JSON PlaceSerializer.new(place)
+    body PlaceSerializer.new(place).to_json
   end
 end
