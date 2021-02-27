@@ -1,0 +1,12 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'config/**/*'
+    - 'spec/**/*'
+    - './*'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
