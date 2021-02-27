@@ -21,9 +21,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Fri, 26 Feb 2021 01:15:35 GMT
+      - Sat, 27 Feb 2021 17:57:21 GMT
       Expires:
-      - Fri, 26 Feb 2021 01:20:35 GMT
+      - Sat, 27 Feb 2021 18:02:21 GMT
       Cache-Control:
       - public, max-age=300
       Vary:
@@ -31,13 +31,13 @@ http_interactions:
       Server:
       - scaffolding on HTTPServer2
       Content-Length:
-      - '845'
+      - '851'
       X-Xss-Protection:
       - '0'
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=591
+      - gfet4t7; dur=625
       Alt-Svc:
       - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
         ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
@@ -48,7 +48,7 @@ http_interactions:
            "html_attributions" : [],
            "results" : [
               {
-                 "business_status" : "OPERATIONAL",
+                 "business_status" : "CLOSED_TEMPORARILY",
                  "formatted_address" : "6715 W Colfax Ave, Lakewood, CO 80214, United States",
                  "geometry" : {
                     "location" : {
@@ -68,16 +68,14 @@ http_interactions:
                  },
                  "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
                  "name" : "Casa Bonita",
-                 "opening_hours" : {
-                    "open_now" : true
-                 },
+                 "permanently_closed" : true,
                  "photos" : [
                     {
                        "height" : 3024,
                        "html_attributions" : [
                           "\u003ca href=\"https://maps.google.com/maps/contrib/108638165399857172930\"\u003eA Google User\u003c/a\u003e"
                        ],
-                       "photo_reference" : "ATtYBwLZeZ16UlM-tKykSUqETOZYG4CPZkLkvO53zu8zrlTEP0O34HvW9DPc-L6i-mpsnz2QIx5JQ3Y7oCSp5Yr9_568mNQ0PxotWMz17bdzqIZkGVhaP2-Moz3_QEtti2VYfErFcYmEsWMSQ_7Z1fzjZedSaIwO90L3l2_jomd51E35rb_o",
+                       "photo_reference" : "ATtYBwLWbUNFg6AUGMHd6cbvlN4by-EM9-1NLVpycB6LTLv6OVtUNVRVEVwmebyB_WgtJO4X0i88B2h7Mho9FtH6TaWfpPFeAG8H8LEBYi8Mw8zBg3iIjXU95MI-5aCd3p0vBs7r5sqR9fkLLtwPR9rOXuQ1qTfL1nM5f1QiksYXIkksWomC",
                        "width" : 4032
                     }
                  ],
@@ -95,5 +93,5 @@ http_interactions:
            ],
            "status" : "OK"
         }
-  recorded_at: Fri, 26 Feb 2021 01:15:35 GMT
+  recorded_at: Sat, 27 Feb 2021 17:57:21 GMT
 recorded_with: VCR 6.0.0

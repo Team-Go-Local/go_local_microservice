@@ -20,6 +20,6 @@ RSpec.describe Place do
     expect(@casa.place_id).to eq(@result[:results][0][:place_id])
     expect(@casa.formatted_address).to eq(@result[:results][0][:formatted_address])
     expect(@casa.name).to eq(@result[:results][0][:name])
-    expect(@casa.type).to eq(@result[:results][0][:type])
+    expect(@casa.types).to eq(@result[:results][0][:types])
   end
 end
