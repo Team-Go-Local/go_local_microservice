@@ -117,6 +117,7 @@ DEPENDENCIES
   fast_jsonapi
   figaro!
   pry
+  rack
   rack-test
   require_all
   rspec
