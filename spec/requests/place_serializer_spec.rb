@@ -8,7 +8,7 @@ RSpec.describe 'PlaceSerializer' do
   it 'responds with the JSON requested' do
     VCR.use_cassette('place_search') do
       get '/api/v1/place_search?location=Casa-Bonita-Denver'
-      # require 'pry'; binding.pry
+
       expect(last_response.status).to eq 200
       response = JSON.parse(last_response.body, symbolize_names: true)
 

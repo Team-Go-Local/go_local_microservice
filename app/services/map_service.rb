@@ -1,7 +1,7 @@
 require 'faraday'
 require './config/environment'
 
-class MapService 
+class MapService
   class << self
     def place_search(query)
       response = conn.get('place/textsearch/json') do |req|
