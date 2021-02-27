@@ -3,9 +3,7 @@ ENV['SINATRA_ENV'] = 'test'
 require './config/environment'
 
 require 'simplecov'
-SimpleCov.start do
-  add_filter ['spec/']
-end
+SimpleCov.start
 
 Dir['./app/*/*.rb'].each { |file| require file }
 
