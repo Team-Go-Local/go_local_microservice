@@ -1,10 +1,10 @@
-ENV['SINATRA_ENV'] ||= "test"
+ENV['SINATRA_ENV'] ||= 'test'
 require './config/environment'
 require 'simplecov'
 SimpleCov.start do
   add_filter ['spec/']
 end
-Dir['./app/*/*.rb'].each {|file| require file}
+Dir['./app/*/*.rb'].each { |file| require file }
 require 'capybara/rspec'
 require 'capybara/dsl'
 require 'rack/test'
@@ -126,7 +126,7 @@ require 'figaro/sinatra'
 require 'webmock/rspec'
 
 VCR.configure do |config|
-  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock
   config.filter_sensitive_data('<MAP_API_KEY>') { ENV['MAP_API_KEY'] }
   config.default_cassette_options = { re_record_interval: 7.days }

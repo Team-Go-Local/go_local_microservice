@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe Place do
-  before :each do 
+  before :each do
     @result = {"results": [{ "formatted_address": "6715 W Colfax Ave, Lakewood, CO 80214, United States",
               "name": "Casa Bonita",
               "place_id": "ChIJE7tYRySHa4cRSauU_fDROfk",
@@ -12,8 +12,8 @@ RSpec.describe Place do
                 "establishment"
                 ]}]}
 
-      @casa = Place.new(@result)
-    end
+    @casa = Place.new(@result)
+  end
 
   it 'instantiates with attributes' do
     expect(@casa).to be_a Place
