@@ -5,9 +5,9 @@ class Place
               :types
 
   def initialize(result)
-    @place_id = result[:results][0][:place_id]
-    @formatted_address = result[:results][0][:formatted_address]
-    @name = result[:results][0][:name]
-    @types = result[:results][0][:types]
+    @place_id = result[:place_id]
+    @formatted_address = result[:formatted_address]
+    @name = result[:name]
+    @types = result[:types]
   end
 end

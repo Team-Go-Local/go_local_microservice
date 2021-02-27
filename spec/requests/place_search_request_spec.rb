@@ -30,13 +30,12 @@ RSpec.describe 'PlaceSerializer' do
     VCR.use_cassette('no_results') do
       get '/api/v1/place_search?location=search-query-with-no-results'
 
-      expect(last_response.status).to eq(404)
+      expect(last_response.status).to eq(200)
       expect(last_response.header['Content-Type']).to eq('application/json')
       response = JSON.parse(last_response.body, symbolize_names: true)
 
       expect(response).to be_a Hash
-      check_hash_structure(response, :data, Hash)
-      expect(response[:data]).to be_empty
+      check_hash_structure(response, :data, NilClass)
     end
   end
 end
