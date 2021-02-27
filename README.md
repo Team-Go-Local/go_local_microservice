@@ -31,10 +31,11 @@ To use on your local machine please follow the instcutions below:
 Run with $ bundle exec rspec. All tests should be passing.
 You can also run $ bundle exec rspec /path
 
-## Database Schema
-![go-local-be-db](https://user-images.githubusercontent.com/69552154/109088087-f83b3300-76cb-11eb-9482-bb1cad8fba84.png)
 
 ## API Information 
+
+Utilizing Google Maps API
+- [Place Search](https://developers.google.com/maps/documentation/places/web-service/search)
 
 
 

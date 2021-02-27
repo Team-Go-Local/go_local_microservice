@@ -10,8 +10,10 @@ gem 'figaro', git: 'https://github.com/bpaquet/figaro.git', branch: 'sinatra'
 gem 'sinatra', require: 'sinatra/base'
 gem 'shotgun'
 gem 'require_all'
+gem 'rack'
 
 group :development, :test do
+  gem 'capybara'
   gem 'factory_bot'
   gem 'faker'
   gem 'pry'
@@ -20,6 +22,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'rack-test'
   gem 'vcr'
   gem 'webmock'
 end
