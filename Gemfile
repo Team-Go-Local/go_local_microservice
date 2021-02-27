@@ -10,6 +10,7 @@ gem 'figaro', git: 'https://github.com/bpaquet/figaro.git', branch: 'sinatra'
 gem 'sinatra', require: 'sinatra/base'
 gem 'shotgun'
 gem 'require_all'
+gem 'fast_jsonapi'
 
 group :development, :test do
   gem 'factory_bot'
