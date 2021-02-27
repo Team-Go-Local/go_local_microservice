@@ -51,7 +51,6 @@ GEM
     multipart-post (2.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    nokogiri (1.11.1-x86_64-darwin)
       racc (~> 1.4)
     pry (0.14.0)
       coderay (~> 1.1)
@@ -108,7 +107,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-darwin-19
 
 DEPENDENCIES
   capybara
