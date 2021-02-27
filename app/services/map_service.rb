@@ -1,6 +1,3 @@
-require 'faraday'
-require './config/environment'
-
 class MapService
   class << self
     def place_search(query)

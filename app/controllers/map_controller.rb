@@ -1,11 +1,16 @@
-require './config/environment'
-require './app/services/map_service'
-require 'sinatra/base'
-
 class MapController < Sinatra::Base
+  before do
+    content_type :json
+  end
+
   get '/api/v1/place_search' do
     info = MapService.place_search(params[:location])
-    place = Place.new(info)
-    body PlaceSerializer.new(place).to_json
+    if info[:status] == 'OK'
+      place = Place.new(info)
+      body PlaceSerializer.new(place).serialized_json
+    else
+      body ({data: {}}).to_json
+      status :not_found
+    end
   end
 end
