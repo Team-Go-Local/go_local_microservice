@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/details/json?fields=name,formatted_address,formatted_phone_number,opening_hours/weekday_text,website,types,business_status&key=<MAP_API_KEY>&place_id=ChIJFaqhMyt_bIcRMfeTGF4E8kM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sat, 27 Feb 2021 22:11:37 GMT
+      Expires:
+      - Sat, 27 Feb 2021 22:16:37 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '382'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=100
+      Alt-Svc:
+      - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICAiaHRtbF9hdHRyaWJ1dGlvbnMiIDogW10sCiAgICJyZXN1bHQiIDogewogICAgICAiYnVzaW5lc3Nfc3RhdHVzIiA6ICJPUEVSQVRJT05BTCIsCiAgICAgICJmb3JtYXR0ZWRfYWRkcmVzcyIgOiAiMTAwIFcgMTR0aCBBdmUgUGt3eSwgRGVudmVyLCBDTyA4MDIwNCwgVVNBIiwKICAgICAgImZvcm1hdHRlZF9waG9uZV9udW1iZXIiIDogIig3MjApIDg2NS01MDAwIiwKICAgICAgIm5hbWUiIDogIkRlbnZlciBBcnQgTXVzZXVtIiwKICAgICAgIm9wZW5pbmdfaG91cnMiIDogewogICAgICAgICAid2Vla2RheV90ZXh0IiA6IFsKICAgICAgICAgICAgIk1vbmRheTogMTA6MDAgQU0g4oCTIDU6MDAgUE0iLAogICAgICAgICAgICAiVHVlc2RheTogMTA6MDAgQU0g4oCTIDU6MDAgUE0iLAogICAgICAgICAgICAiV2VkbmVzZGF5OiAxMDowMCBBTSDigJMgNTowMCBQTSIsCiAgICAgICAgICAgICJUaHVyc2RheTogMTA6MDAgQU0g4oCTIDU6MDAgUE0iLAogICAgICAgICAgICAiRnJpZGF5OiAxMDowMCBBTSDigJMgNTowMCBQTSIsCiAgICAgICAgICAgICJTYXR1cmRheTogMTA6MDAgQU0g4oCTIDU6MDAgUE0iLAogICAgICAgICAgICAiU3VuZGF5OiAxMDowMCBBTSDigJMgNTowMCBQTSIKICAgICAgICAgXQogICAgICB9LAogICAgICAidHlwZXMiIDogWyAidG91cmlzdF9hdHRyYWN0aW9uIiwgIm11c2V1bSIsICJwb2ludF9vZl9pbnRlcmVzdCIsICJlc3RhYmxpc2htZW50IiBdLAogICAgICAid2Vic2l0ZSIgOiAiaHR0cHM6Ly9kZW52ZXJhcnRtdXNldW0ub3JnLyIKICAgfSwKICAgInN0YXR1cyIgOiAiT0siCn0K
+  recorded_at: Sat, 27 Feb 2021 22:11:37 GMT
+recorded_with: VCR 6.0.0
