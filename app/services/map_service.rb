@@ -2,7 +2,7 @@ class MapService
   class << self
     def place_search(query)
       response = conn.get('place/textsearch/json') do |req|
-        req.params[:query] = query.downcase.gsub(' ', '-')
+        req.params[:query] = query
       end
       JSON.parse(response.body, symbolize_names: true)
     end

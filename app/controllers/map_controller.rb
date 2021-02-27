@@ -9,7 +9,7 @@ class MapController < Sinatra::Base
       place = Place.new(info)
       body PlaceSerializer.new(place).serialized_json
     else
-      body ({data: {}}).to_json
+      body ({ data: {} }).to_json
       status :not_found
     end
   end
