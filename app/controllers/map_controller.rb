@@ -4,6 +4,8 @@ require 'sinatra/base'
 
 class MapController < Sinatra::Base
   get '/api/v1/place_search' do
-    MapService.place_search()
+    info = MapService.place_search(params[:location])
+    place = Place.new(info)
+    JSON PlaceSerializer.new(place)
   end
 end
