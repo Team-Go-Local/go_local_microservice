@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/textsearch/json?key=<MAP_API_KEY>&query=search-query-with-no-results
+    uri: https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=place_id,formatted_address,name,types&input=search-query-with-no-results&inputtype=textquery&key=<MAP_API_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -21,23 +21,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sat, 27 Feb 2021 18:10:12 GMT
+      - Sat, 27 Feb 2021 21:10:42 GMT
       Expires:
-      - Sat, 27 Feb 2021 18:15:12 GMT
+      - Sat, 27 Feb 2021 21:15:42 GMT
       Cache-Control:
       - public, max-age=300
-      Vary:
-      - Accept-Language
       Server:
       - scaffolding on HTTPServer2
       Content-Length:
-      - '83'
+      - '68'
       X-Xss-Protection:
       - '0'
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=282
+      - gfet4t7; dur=413
       Alt-Svc:
       - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
         ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
@@ -45,9 +43,8 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-           "html_attributions" : [],
-           "results" : [],
+           "candidates" : [],
            "status" : "ZERO_RESULTS"
         }
-  recorded_at: Sat, 27 Feb 2021 18:10:12 GMT
+  recorded_at: Sat, 27 Feb 2021 21:10:42 GMT
 recorded_with: VCR 6.0.0
