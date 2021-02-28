@@ -1,19 +1,21 @@
-require 'sinatra/base'
-require './config/environment'
-require './app/services/map_service'
-
 class Place
   attr_reader :place_id,
               :formatted_address,
               :name,
-              :type,
-              :id
+              :types,
+              :formatted_phone_number,
+              :website,
+              :business_status,
+              :opening_hours
 
   def initialize(result)
-    @id = nil
-    @place_id = result[:results][0][:place_id]
-    @formatted_address = result[:results][0][:formatted_address]
-    @name = result[:results][0][:name]
-    @type = result[:results][0][:type]
+    @place_id = result[:place_id]
+    @formatted_address = result[:formatted_address]
+    @name = result[:name]
+    @types = result[:types]
+    @formatted_phone_number = result[:formatted_phone_number]
+    @website = result[:website]
+    @business_status = result[:business_status]
+    @opening_hours = result[:opening_hours][:weekday_text] if result[:opening_hours]
   end
 end

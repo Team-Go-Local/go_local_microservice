@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=place_id,formatted_address,name,types&input=casa-bonita-denver&inputtype=textquery&key=<MAP_API_KEY>
+    uri: https://maps.googleapis.com/maps/api/place/details/json?fields=name,formatted_address,formatted_phone_number,opening_hours/weekday_text,website,types,business_status&key=<MAP_API_KEY>&place_id=ChIJE7tYRySHa4cRSauU_fDROfk
     body:
       encoding: US-ASCII
       string: ''
@@ -21,21 +21,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sat, 27 Feb 2021 21:10:41 GMT
+      - Sat, 27 Feb 2021 22:12:12 GMT
       Expires:
-      - Sat, 27 Feb 2021 21:15:41 GMT
+      - Sat, 27 Feb 2021 22:17:12 GMT
       Cache-Control:
       - public, max-age=300
+      Vary:
+      - Accept-Language
       Server:
       - scaffolding on HTTPServer2
       Content-Length:
-      - '234'
+      - '289'
       X-Xss-Protection:
       - '0'
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=626
+      - gfet4t7; dur=124
       Alt-Svc:
       - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
         ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
@@ -43,15 +45,16 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-           "candidates" : [
-              {
-                 "formatted_address" : "6715 W Colfax Ave, Lakewood, CO 80214, United States",
-                 "name" : "Casa Bonita",
-                 "place_id" : "ChIJE7tYRySHa4cRSauU_fDROfk",
-                 "types" : [ "restaurant", "food", "point_of_interest", "establishment" ]
-              }
-           ],
+           "html_attributions" : [],
+           "result" : {
+              "business_status" : "CLOSED_TEMPORARILY",
+              "formatted_address" : "6715 W Colfax Ave, Lakewood, CO 80214, USA",
+              "formatted_phone_number" : "(303) 232-5115",
+              "name" : "Casa Bonita",
+              "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+              "website" : "http://www.casabonitadenver.com/"
+           },
            "status" : "OK"
         }
-  recorded_at: Sat, 27 Feb 2021 21:10:41 GMT
+  recorded_at: Sat, 27 Feb 2021 22:12:12 GMT
 recorded_with: VCR 6.0.0
