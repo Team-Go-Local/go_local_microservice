@@ -1,6 +1,6 @@
 # Go Local-Microservice
 
-![image](app/assets/images/go_local.png)
+<img src="app/assets/go_local.png" width="120">
 
 
 ## Table of Contents
