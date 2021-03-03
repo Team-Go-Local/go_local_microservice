@@ -1,6 +1,6 @@
-# Go Local-Microservice
+# Go Local: Places API Microservice
 
-<img src="app/assets/go_local.png" width="120">
+<img src="app/assets/bw_logo.png" width="200">
 
 
 ## Table of Contents
@@ -35,22 +35,22 @@ This portion of the application exposes two endpoints to be consumed by our back
   - example response:
   ```
   {
-    "data": {
-      "id": null,
-      "type": "place",
-      "attributes": {
-        "place_id": "ChIJE7tYRySHa4cRSauU_fDROfk",
-        "formatted_address": "6715 W Colfax Ave, Lakewood, CO 80214, United States",
-        "name": "Casa Bonita",
-        "types": [
-          "restaurant",
-          "food",
-          "point_of_interest",
-          "establishment"
-        ]
+      "data": {
+        "id": null,
+        "type": "place",
+        "attributes": {
+          "place_id": "ChIJE7tYRySHa4cRSauU_fDROfk",
+          "formatted_address": "6715 W Colfax Ave, Lakewood, CO 80214, United States",
+          "name": "Casa Bonita",
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
       }
     }
-  }
   ```
 - `GET /api/v1/place_details`: fetches more specific information about recommended sites<br>
 
@@ -59,33 +59,33 @@ This portion of the application exposes two endpoints to be consumed by our back
   - example response:
   ```
   {
-    "data": {
-      "id": null,
-      "type": "place",
-      "attributes": {
-        "place_id": "ChIJFaqhMyt_bIcRMfeTGF4E8kM",
-        "formatted_address": "100 W 14th Ave Pkwy, Denver, CO 80204, USA",
-        "name": "Denver Art Museum",
-        "types": [
-          "tourist_attraction",
-          "museum",
-          "point_of_interest",
-          "establishment"
-        ],
-        "formatted_phone_number": "(720) 865-5000",
-        "website": "https://denverartmuseum.org/",
-        "business_status": "OPERATIONAL",
-        "opening_hours": [
-          "Monday: 10:00 AM – 5:00 PM",
-          "Tuesday: 10:00 AM – 5:00 PM",
-          "Wednesday: 10:00 AM – 5:00 PM",
-          "Thursday: 10:00 AM – 5:00 PM",
-          "Friday: 10:00 AM – 5:00 PM",
-          "Saturday: 10:00 AM – 5:00 PM",
-          "Sunday: 10:00 AM – 5:00 PM"
-        ]
+      "data": {
+        "id": null,
+        "type": "place",
+        "attributes": {
+          "place_id": "ChIJFaqhMyt_bIcRMfeTGF4E8kM",
+          "formatted_address": "100 W 14th Ave Pkwy, Denver, CO 80204, USA",
+          "name": "Denver Art Museum",
+          "types": [
+            "tourist_attraction",
+            "museum",
+            "point_of_interest",
+            "establishment"
+          ],
+          "formatted_phone_number": "(720) 865-5000",
+          "website": "https://denverartmuseum.org/",
+          "business_status": "OPERATIONAL",
+          "opening_hours": [
+            "Monday: 10:00 AM – 5:00 PM",
+            "Tuesday: 10:00 AM – 5:00 PM",
+            "Wednesday: 10:00 AM – 5:00 PM",
+            "Thursday: 10:00 AM – 5:00 PM",
+            "Friday: 10:00 AM – 5:00 PM",
+            "Saturday: 10:00 AM – 5:00 PM",
+            "Sunday: 10:00 AM – 5:00 PM"
+          ]
+        }
       }
-    }
   }
   ```
 
