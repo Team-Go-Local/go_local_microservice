@@ -8,11 +8,17 @@ class MapController < Sinatra::Base
     place = Place.new(info[:candidates][0]) if info[:status] == 'OK'
     fields = { fields: { place: %i[place_id formatted_address name types] } }
     body PlaceSerializer.new(place, fields).serialized_json
+  rescue NoMethodError
+    body ErrorSerializer.serialized_json
+    status 404
   end
 
   get '/api/v1/place_details' do
     info = MapService.place_details(params[:place_id])
-    place = Place.new(info[:result].merge(place_id: params[:place_id]))
+    place = Place.new(info[:result].merge(place_id: params[:place_id])) if info[:status] == 'OK'
     body PlaceSerializer.new(place).serialized_json
+  rescue NoMethodError
+    body ErrorSerializer.serialized_json
+    status 404
   end
 end

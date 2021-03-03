@@ -6,7 +6,7 @@ class MapService
         req.params[:inputtype] = 'textquery'
         req.params[:fields] = 'place_id,formatted_address,name,types'
       end
-      JSON.parse(response.body, symbolize_names: true)
+      JSON.parse(response.body, symbolize_names: true) if response.status == 200
     end
 
     def place_details(place_id)
@@ -15,7 +15,7 @@ class MapService
         req.params[:fields] = 'name,formatted_address,formatted_phone_number,' \
                               'opening_hours/weekday_text,website,types,business_status'
       end
-      JSON.parse(response.body, symbolize_names: true)
+      JSON.parse(response.body, symbolize_names: true) if response.status == 200
     end
 
     private
