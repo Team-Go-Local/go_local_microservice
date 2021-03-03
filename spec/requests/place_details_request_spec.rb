@@ -48,4 +48,31 @@ RSpec.describe 'place details request' do
       check_hash_structure(response[:data][:attributes], :opening_hours, NilClass)
     end
   end
+
+  it 'handles a request with no place id' do
+    VCR.use_cassette('missing_id') do
+      get '/api/v1/place_details?place_id='
+
+      expect(last_response.status).to eq(200)
+      expect(last_response.header['Content-Type']).to eq('application/json')
+      response = JSON.parse(last_response.body, symbolize_names: true)
+
+      expect(response).to be_a Hash
+      check_hash_structure(response, :data, NilClass)
+    end
+  end
+
+  it 'returns an error if there is no response from Google' do
+    stub_request(:get, "https://maps.googleapis.com/maps/api/place/details/json?fields=name,formatted_address,formatted_phone_number,opening_hours/weekday_text,website,types,business_status&key=AIzaSyBakD-sBtlGd3HupAxADRBfmg-gh73H0EQ&place_id=ChIJE7tYRySHa4cRSauU_fDROfk").to_return(status: 500)
+    get '/api/v1/place_details?place_id=ChIJE7tYRySHa4cRSauU_fDROfk'
+
+    expect(last_response.status).to eq(404)
+    expect(last_response.header['Content-Type']).to eq('application/json')
+    response = JSON.parse(last_response.body, symbolize_names: true)
+
+    expect(response).to be_a Hash
+    check_hash_structure(response, :errors, Array)
+    expect(response[:errors][0]).to eq('the request could not be completed')
+    expect(response[:errors][1]).to eq('external Places API unavailable')
+  end
 end
