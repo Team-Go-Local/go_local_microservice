@@ -1,4 +1,4 @@
-# Go Local: Places API Microservice
+# Go Local: Places API micro-service
 
 <img src="app/assets/bw_logo.png" width="200">
 
@@ -6,10 +6,10 @@
 ## Table of Contents
 
 -   [Description](#description)
+-   [System Design](#system-design)
 -   [API Contract](#api-contract)
 -   [Technologies Used](#technologies-used)
 -   [Local Setup](#local-setup)
--   [Running the Tests](#running-the-tests)
 -   [Learning Goals](#learning-goals)
 -   [Authors](#authors)
 -   [Statistics](#statistics)
@@ -18,11 +18,15 @@
 Go Local allows travelers to experience their destinations like a local by inviting local users to suggest authentic travel experiences for visitors to enjoy. The app follows a Service-Oriented Architecture pattern and consists of:
   - a [front-end Rails application](https://github.com/Team-Go-Local/go_local_frontend), which provides a user interface;
   - a [back-end Rails application](https://github.com/Team-Go-Local/go_local_backend), which manages the app's database;
-  - and a Sinatra microservice application, which retrieves information from the Google Places API.<br>
+  - a Sinatra Places micro-service application to retrieve information from the Google Places API;
+  - and a [Sinatra Cities micro-service application](https://github.com/Team-Go-Local/go_local_cities_api), which retrieves the nearest large city to destinations added by our users.<br>
 
-This repository houses the Sinatra microservice.
+This repository houses the Sinatra micro-service.
 
-##### To view the deployed application, please visit [Go Local](https://go-local-fe.herokuapp.com) on Heroku
+### To view the deployed application, please visit [Go Local](https://go-local-fe.herokuapp.com) on Heroku
+
+## System Design
+<img src="app/assets/system.png" width="700">
 
 ## API Contract
 
@@ -107,8 +111,8 @@ To use the project in your local environment, please follow the instructions bel
 
 1. Apply for an API key on the [Google Maps Developer Platform](https://developers.google.com/maps/documentation/places/web-service/get-api-key). Make sure to enable the Places API for your key on the Google Cloud Platform for your project.
 2. Clone the repository:<br>
-  `git clone git@github.com:Team-Go-Local/go_local_microservice.git`
-  `cd go_local_microservice`
+  `git clone git@github.com:Team-Go-Local/go_local_micro-service.git`
+  `cd go_local_micro-service`
 3. Install gem packages
   `bundle install`
 4. Install Figaro
@@ -141,9 +145,9 @@ To use the project in your local environment, please follow the instructions bel
 -   Isabelle Villasenor | [github](https://github.com/isabellevillasenor) \| [linkedin](https://www.linkedin.com/in/isabelle-villasenor/)
 -   Saundra Catalina | [github](https://github.com/saundracatalina) \| [linkedin](https://www.linkedin.com/in/saundra-catalina/)
 -   Sam Yeo | [github](https://github.com/SK-Sam) \| [linkedin](https://www.linkedin.com/in/samuel-horishin-yeo/)
--   V Arruda | [github](https://github.com/nessarruda) \| [linkedin](https://www.linkedin.com/in/vanessa-alves-de-arruda/)
--   Yesi Meza | [github](https://github.com/SK-Sam) \| [linkedin](https://www.linkedin.com/in/yesimeza/)
+-   V Arruda | [github](https://github.com/nessaarruda) \| [linkedin](https://www.linkedin.com/in/vanessa-alves-de-arruda/)
+-   Yesi Meza | [github](https://github.com/Yesi-MC) \| [linkedin](https://www.linkedin.com/in/yesimeza/)
 
 ## Statistics
 <!-- Shields -->
-![](https://img.shields.io/github/contributors/Team-Go-Local/go_local_microservice)
+![](https://img.shields.io/github/contributors/Team-Go-Local/go_local_micro-service)
