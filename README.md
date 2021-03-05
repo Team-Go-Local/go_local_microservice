@@ -22,7 +22,10 @@ Go Local allows travelers to experience their destinations like a local by invit
 
 This repository houses the Sinatra micro-service.
 
-##### To view the deployed application, please visit [Go Local](https://go-local-fe.herokuapp.com) on Heroku
+### To view the deployed application, please visit [Go Local](https://go-local-fe.herokuapp.com) on Heroku
+
+## System Design
+<img src="app/assets/system.png">
 
 ## API Contract
 
